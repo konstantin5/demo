@@ -16,9 +16,11 @@ android {
     buildTypes {
         debug {
             buildConfigField 'String', 'HOST', '"https://api.tinkoff.ru"'
+            buildConfigField 'Long', 'CacheSize', '10 * 1024 * 1024L'
         }
         release {
             buildConfigField 'String', 'HOST', '"https://api.tinkoff.ru"'
+            buildConfigField 'Long', 'CacheSize', '10 * 1024 * 1024L'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

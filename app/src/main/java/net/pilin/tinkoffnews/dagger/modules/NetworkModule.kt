@@ -44,7 +44,7 @@ object NetworkModule {
     @Reusable
     internal fun provideHttpCache(context: Context): Cache {
         val httpCacheDirectory = File(context.cacheDir, "http-cache")
-        val cacheSize = 10 * 1024 * 1024L
+        val cacheSize = BuildConfig.CacheSize
         return Cache(httpCacheDirectory, cacheSize)
     }
 
@@ -52,24 +52,19 @@ object NetworkModule {
     @Reusable
     internal fun provideHttpClient(cache: Cache): OkHttpClient {
         return OkHttpClient.Builder()
-            .addNetworkInterceptor(CacheInterceptor())
+            .addNetworkInterceptor { chain->
+                val response = chain.proceed(chain.request())
+                val cacheControl = CacheControl.Builder()
+                    .maxAge(15, TimeUnit.MINUTES) // 15 minutes cache
+                    .build()
+                response.newBuilder()
+                    .removeHeader("Pragma")
+                    .removeHeader("Cache-Control")
+                    .header("Cache-Control", cacheControl.toString())
+                    .build()
+            }
             .cache(cache)
             .build()
     }
 
-
-    class CacheInterceptor : Interceptor {
-
-        override fun intercept(chain: Interceptor.Chain): okhttp3.Response {
-            val response = chain.proceed(chain.request())
-            val cacheControl = CacheControl.Builder()
-                .maxAge(15, TimeUnit.MINUTES) // 15 minutes cache
-                .build()
-            return response.newBuilder()
-                .removeHeader("Pragma")
-                .removeHeader("Cache-Control")
-                .header("Cache-Control", cacheControl.toString())
-                .build()
-        }
-    }
 }
