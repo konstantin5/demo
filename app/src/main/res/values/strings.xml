@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tinkoff News</string>
+    <string name="label_network_unavailable">Сервер недоступен.\nПовторить.</string>
+    <string name="error_unable_to_receive_news_content">Не удалось получить новость</string>
+    <string name="snackbar_retry">Повторить</string>
+    <string name="error_news_unavailable_title">Новость недоступна</string>
+    <string name="error_news_unavailable_body">Выбранная новость не содержит контента. А может и содержит. Что значить новость без id - я не знаю.</string>
+</resources>
