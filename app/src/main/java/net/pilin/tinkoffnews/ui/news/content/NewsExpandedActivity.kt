@@ -1,4 +1,4 @@
-package net.pilin.tinkoffnews.ui.news_content
+package net.pilin.tinkoffnews.ui.news.content
 
 import android.os.Bundle
 import android.text.method.LinkMovementMethod

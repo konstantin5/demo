@@ -1,4 +1,4 @@
-package net.pilin.tinkoffnews.ui.news_content
+package net.pilin.tinkoffnews.ui.news.content
 
 import moxy.MvpView
 import moxy.viewstate.strategy.AddToEndSingleStrategy

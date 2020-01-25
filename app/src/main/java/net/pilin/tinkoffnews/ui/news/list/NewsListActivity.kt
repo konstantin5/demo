@@ -1,17 +1,16 @@
-package net.pilin.tinkoffnews.ui.news_list
+package net.pilin.tinkoffnews.ui.news.list
 
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import moxy.MvpAppCompatActivity
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
-import net.pilin.tinkoffnews.ui.news_content.NewsExpandedActivity
-import net.pilin.tinkoffnews.ui.news_content.NewsExpandedPresenter
+import net.pilin.tinkoffnews.ui.news.content.NewsExpandedActivity
+import net.pilin.tinkoffnews.ui.news.content.NewsExpandedPresenter
 import net.pilin.tinkoffnews.R
 
 class NewsListActivity : MvpAppCompatActivity(), NewsListView {

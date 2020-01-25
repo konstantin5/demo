@@ -1,4 +1,4 @@
-package net.pilin.tinkoffnews.ui.news_list
+package net.pilin.tinkoffnews.ui.news.list
 
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.internal.schedulers.IoScheduler

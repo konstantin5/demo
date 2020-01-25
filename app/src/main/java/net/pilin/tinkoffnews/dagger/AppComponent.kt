@@ -3,8 +3,8 @@ package net.pilin.tinkoffnews.dagger
 import dagger.Component
 import net.pilin.tinkoffnews.dagger.modules.ContextModule
 import net.pilin.tinkoffnews.dagger.modules.NetworkModule
-import net.pilin.tinkoffnews.ui.news_content.NewsExpandedPresenter
-import net.pilin.tinkoffnews.ui.news_list.NewsListPresenter
+import net.pilin.tinkoffnews.ui.news.content.NewsExpandedPresenter
+import net.pilin.tinkoffnews.ui.news.list.NewsListPresenter
 
 @Component(
     modules = [

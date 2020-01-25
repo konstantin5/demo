@@ -1,7 +1,6 @@
-package net.pilin.tinkoffnews.ui.news_content
+package net.pilin.tinkoffnews.ui.news.content
 
 import android.content.Intent
-import android.util.Log
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.internal.schedulers.IoScheduler
 import moxy.InjectViewState

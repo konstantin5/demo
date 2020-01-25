@@ -1,4 +1,4 @@
-package net.pilin.tinkoffnews.ui.news_list
+package net.pilin.tinkoffnews.ui.news.list
 
 import android.view.LayoutInflater
 import android.view.View
